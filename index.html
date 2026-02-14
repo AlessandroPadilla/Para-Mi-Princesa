@@ -317,15 +317,16 @@ noBtn.addEventListener("mouseover",()=>{
 
 /* ===== SÍ ===== */
 function yes(){
-    for(let i=0;i<80;i++){
-        let heart=document.createElement("div");
-        heart.className="heart";
-        heart.innerHTML="❤️";
-        heart.style.left=Math.random()*window.innerWidth+"px";
-        heart.style.top=window.innerHeight-30+"px";
-        document.body.appendChild(heart);
-        setTimeout(()=>heart.remove(),3000);
-    }
+    const card = document.querySelector(".card");
+
+    card.style.transition = "all 0.6s ease";
+    card.style.transform = "scale(1.05)";
+    card.style.boxShadow = "0 0 60px rgba(255, 105, 180, 0.6)";
+
+    setTimeout(() => {
+        card.style.transform = "scale(1)";
+    }, 800);
+
     showAlert("Siempre contigo, mi amor ❤️");
 }
 
@@ -338,4 +339,5 @@ function toggleMusic(){
 </script>
 </body>
 </html>
+
 
