@@ -180,7 +180,7 @@ input{
 <div class="music" onclick="toggleMusic()">🎵 Música</div>
 
 <div class="lock" id="lockScreen">
-    <h2 style="color:var(--soft)">Ingresa nuestra fecha especial</h2>
+    <h2 style="color:var(--soft)">Ingresa la contraseña correcta</h2>
     <input type="password" id="pass" placeholder="****">
     <br>
     <button class="btn-yes" onclick="checkPass()">Entrar</button>
@@ -260,13 +260,13 @@ function closeModal(){
 
 /* ===== PASSWORD ===== */
 function checkPass(){
-    if(document.getElementById("pass").value==="1111"){
+    if(document.getElementById("pass").value==="JJOA"){
         document.getElementById("lockScreen").style.display="none";
         document.getElementById("card").style.display="block";
         typeWriter();
         musicAudio.play();
     }else{
-        showAlert("Pista: 11/11 ❤️");
+        showAlert("Pista: Tu y YO ❤️");
     }
 }
 
@@ -339,3 +339,4 @@ function toggleMusic(){
 </script>
 </body>
 </html>
+
